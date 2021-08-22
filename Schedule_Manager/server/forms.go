@@ -7,14 +7,12 @@ import (
 )
 
 type Deadline struct {
-	Year  int `json:"Year"`
 	Month int `json:"Month"`
 	Day   int `json:"Day"`
+	Year  int `json:"Year"`
 }
 
 type Homework struct {
-	Semester    string   `json:"Semester"`
-	Year        int      `json:"Year"`
 	Course      string   `json:"Course"`
 	Link        string   `json:"Link"`
 	Deadline    Deadline `json:"Deadline"`
@@ -27,7 +25,7 @@ func FormHandler(w http.ResponseWriter, r *http.Request) {
 	var hw *Homework
 	err := json.NewDecoder(r.Body).Decode(&hw)
 	if err != nil {
-		fmt.Println("problem with json decoding")
+		fmt.Println("problem with json decoding", hw)
 		http.Error(w, err.Error(), http.StatusBadRequest)
 		return
 	}
