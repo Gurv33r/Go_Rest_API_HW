@@ -1,2 +1,2 @@
 # Go_Rest_API_HW
-Example Rest API in Golang, registers a HW assignment into a database
+Exploring Golang's backend features by creating a small web app that registers homework assignments into a PostgresSQL database
