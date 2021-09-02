@@ -13,7 +13,7 @@ func main() {
 		fmt.Println("Root endpoint hit!")
 		fmt.Fprintf(rw, "Hello, World!")
 	})
-	server.HostOnFS("./client", "/enter")
+	server.HostOnFS("./client", "/new")
 	http.HandleFunc("/api/hw", server.FormHandler)
 	log.Fatal(http.ListenAndServe(":5501", nil))
 }
