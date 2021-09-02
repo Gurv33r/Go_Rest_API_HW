@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+</head>
+<body>
+    <h1>Enter Your Information</h1>
+    <form id="form" name="form">
+        <!-- all inputs need a name attribute to be sent -->
+        <!-- name input -->
+        <div id="name-question" class="form-question-desc">Enter Name:
+            <span class="required">*</span>
+        </div>
+        <input type="text" name="name" id="name" required>
+        <br>
+        <br>
+        <!-- year input -->
+        <div id="year-question" class="form-question-desc">
+            Choose a year:
+            <span class="required">*</span>
+        </div>
+        <input type="number" name="hwYear" id="year-input" value="2021" min="2021" max = "2024">
+        <br>
+        <br>
+        <!-- course input -->
+        <label for="course-name" class="form-question-desc" id="course-question">Enter Course Name:
+            <span class="required">*</span>
+        </label> <br>
+        <input type="text" name="homeworkCourse" id="course-name" required>
+        <br>
+        <br>
+        <!-- link input -->
+        <label for="link" class="form-question-desc" id="link-question">Enter Link to Homework:
+            <span class="required">*</span>
+        </label> <br>
+        <input type="text" name="homeworkLink" id="link" required>
+        <br>
+        <br>
+        <!-- deadline input -->
+        <label for="deadline" class="form-question-desc" id="link-question">Enter due date:
+            <span class="required">*</span>
+        </label> <br>
+        <input type="date" name="homeworkDeadline" id="deadline" min = "2021-08-21" max = "2024-12-31" required>
+        <br>
+        <!-- description input -->
+        <label for="hwDesc" class="form-question-desc" id="desc-question">Any Details about the assignment?
+            <span class="required">*</span>
+        </label> <br>
+        <textarea name="hwDesc" id="hwdesc" cols="30" rows="10" required></textarea>
+        <!-- submit form button -->
+        <br>
+        <input type="submit" value="Submit" id="submit">
+        <br>
+        <br>
+        <div class="required" id="required-desc">*Required</div>
+        <br>
+        <br>
+        <div class="error" id="error-wrapper">
+            Result: <span id="error"></span>
+        </div>
+        <div id="out"></div>
+        <script src="./form.js"></script>
+</body>
+</html>
